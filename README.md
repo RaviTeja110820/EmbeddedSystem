@@ -80,3 +80,46 @@
 ### Embedded Development Life cycle
 
 ![EmbeddedDevelpmentLifeCycle](./Images/EmbeddedDevelopmentLifeCycle.jpg)
+
+
+## **How To Choose a Right Processor**
+
+![TypesOfProcessorsAndControllers](./Images/TypesOfProcessorsAndController.jpg)
+
+> To Know about the manufactures of different processors and controllers you can visit [DigiLink](https://www.digikey.in/)
+
+![ManufacturerOfProcessorsAndControllers](./Images/ManufacturesOfProcessors.jpg)
+
+### MicroProcessor
+
+![MicroProcessor](./Images/MicroProcessor.jpg)
+
+* A microprocessor is a programmable integrated circuit (IC) that serves as the central processing unit (CPU) of a computer or electronic device. It is essentially the "brain" of a computer system, responsible for executing instructions and performing calculations. microprocessors require peripherals to interact with the external world and perform various tasks. Peripherals are additional devices and components that connect to the microprocessor to extend its capabilities and facilitate communication with the outside environment.
+* Example : 8051
+
+### MicroController 
+
+![MicroController](./Images/Microcontroller.jpg)
+
+* A microcontroller is a compact, integrated circuit (IC) that contains a processor core, memory, and programmable input/output peripherals. Unlike a general-purpose microprocessor, which is designed for tasks like running an operating system and handling a wide range of applications, a microcontroller is specifically intended for embedded systems and dedicated control applications.
+
+### DSP (Digital Signal Processor)
+
+* Digital Signal Processor is Mathematics on chip
+* DSPs usually run applications with hard real-time constraints.
+* DSPs usually process infinite continuous data streams
+* MAC capability (Multiply-Accumulate operation)
+* DSP Processors are Microprocessors designed for efficient mathematical manipulation of digital signals
+
+#### why DSP Processor
+
+* MicroControllers are control oriented , DSP are data path oriented .
+* use a GPP Processor when the following are required:
+  * Large Memory
+  * Advanced operating system
+* Use a DSP processor when the following are required:
+  * Precision
+  * cost saving
+  * smaller size
+  * low power consumption
+  * processing of signals in realtime
