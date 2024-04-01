@@ -123,3 +123,21 @@
   * smaller size
   * low power consumption
   * processing of signals in realtime
+  
+> DSP processor uses Harvard architecture 
+
+![[architecture]](./Images/architecture.jpg)
+
+
+### FPGA VS CPLG
+
+* FPGA - Field Programmable Gate Array, CPLD - Complex Programmable Logic Devices
+* CPLD is control path oriented, FPGA is Data path oriented
+
+![[CPLDarchitecture]](./Images/CPLDArchitecture.jpg)
+
+![[FPGAarchitecture]](./Images/FPGAArchitecture.jpg)
+
+![[Multicore]](./Images/multicore.jpg)
+
+![[Package]](./Images/package.jpg)
