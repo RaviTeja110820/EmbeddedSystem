@@ -141,3 +141,64 @@
 ![[Multicore]](./Images/multicore.jpg)
 
 ![[Package]](./Images/package.jpg)
+
+
+
+## ARM
+
+* Acorn RISC Machine -> Advanced RISC machine
+* Founded in 1990
+  * spun out of Acron Computers
+* Designs the ARM range of RISC processor
+* Licenses ARM core for Design Partners
+  * ARM does not fabricate silicon on own
+* Develops technology to assist with ARM Arch
+  * Software Tools
+  * Boards , Debug Hardware , Peripherials
+  * Application software , BUs Architecture 
+
+### why ARM
+
+* Built in Architecture extensions
+  * THUMB 2 - Greatly improved code density
+  * DSP - signal process directly in the RISC core
+  * jazelle - Java acceleration
+  * Trustzone - Maximum security environment
+* Core Performance
+* Tools of Choice
+* Wide Support
+* Low Power Consumption
+
+### ARM Processor VS ARM Architecture
+
+#### ARM Architecture
+
+* This refers to the design principles, instruction set, and specifications developed by ARM Holdings. The ARM architecture defines how instructions are executed, how data is processed, and how the processor interacts with other components in a system. It's like the blueprint or framework for building processors.
+* Documented in the Architecture Reference Manual
+
+#### ARM Processor
+
+* An ARM processor is a specific implementation of the ARM architecture by a particular manufacturer. There are various ARM processors available from different companies like Qualcomm, Apple, Samsung, and others. Each manufacturer may customize the ARM architecture to some extent, adding their own features, optimizations, or additional instructions tailored to specific applications or performance requirements.
+* Documented in the Processor Technical Reference Manual
+
+In summary, the ARM architecture is the overarching design framework, while ARM processors are specific implementations of that architecture by different manufacturers, each with its own variations and optimizations.
+
+
+### ARM Versions
+
+<https://en.wikipedia.org/wiki/List_of_ARM_processors>
+
+![[ARM-Versions]](./Images/ARMVersions.jpg)
+
+* Cortex-A series (Application)
+  * High performance processors capable of full Operating System (OS) support
+  * Applications include smartphones, digital TV, smart books
+* Cortex-R series (Real-time)
+  * High performance and reliability for real-time applications;
+  * Applications include automotive braking system, powertrains
+* Cortex-M series (Microcontroller)
+  * Cost-sensitive solutions for deterministic microcontroller applications
+  * Applications include microcontrollers, smart sensors
+* SecurCore series
+  * High security applications
+* Earlier classic processors including Arm7, Arm9, Arm
