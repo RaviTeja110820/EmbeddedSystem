@@ -202,3 +202,50 @@ In summary, the ARM architecture is the overarching design framework, while ARM 
 * SecurCore series
   * High security applications
 * Earlier classic processors including Arm7, Arm9, Arm
+
+### Architecture Extensions
+
+![[THumb]](./Images/Thumb.jpg)
+
+#### **THUMB:**
+
+* The original Thumb instruction set was introduced with ARMv4 architecture. It allows instructions to be encoded in a 16-bit format, which is half the size of standard 32-bit ARM instructions. This compression leads to reduced memory usage and improved code density. Thumb instructions are generally simpler and more compact than their 32-bit ARM counterparts. However, Thumb instructions sacrifice some performance compared to full ARM instructions because they typically perform fewer operations per cycle.
+* introduced in ARM7TDMI Processor ("T" stands for THUMB)
+* subsequently supported in every ARM processor developed since
+
+#### **THUMB2:**
+
+* Thumb-2, introduced with ARMv6 architecture, is an extension of the original Thumb instruction set. It retains the 16-bit encoding for most instructions but introduces a wider range of instructions and capabilities. Thumb-2 allows for a mix of both 16-bit Thumb instructions and 32-bit Thumb instructions, providing better performance and flexibility. This hybrid approach allows Thumb-2 to achieve a good balance between code size and performance, making it suitable for a wider range of applications.
+* all processor operations can indeed be handled in "Thumb state".
+* supported across the Cortex-M processor range
+
+#### **TrustZone:**
+
+* Provide a Trusted Execution Environment (TEE)
+* Consistent programming model across platforms and applications.
+* Hardware backed security environment
+
+#### **JazelleⓇ:**
+
+* Technology to enable Jazelle H/w in any existing JVM
+* Full featured multi-tasking Java Virtual Machine JVM
+* Enables acceleration of execution environments
+
+#### AMBA (Advanced Microcontroller Bus Architecture):
+
+* The AMBA (Advanced Microcontroller Bus Architecture) system is an open standard that defines how different components within a System-on-Chip (SoC) communicate with each other. It's essentially a set of rules and specifications for on-chip communication, offering several advantages: Faster Data Transfer , Efficient Design , Reduced Power Consumption.
+* Multiple Bus Types: AMBA defines different bus protocols, each suited for different scenarios:
+  * <ins> AHB (Advanced High-performance Bus) </ins>: High-performance for data-intensive tasks between main processors and memory controllers.
+  * <ins> ASB (Advanced System Bus) </ins>: Connects high-bandwidth components like external memory interfaces. (Less common nowadays) 
+  * <ins> APB (Advanced Peripheral Bus) </ins>: Low-power, low-performance bus ideal for low-bandwidth peripherals.
+
+![[AMBA]](./Images/AMBA.jpg)
+
+## Cortex-M Processor Profile
+
+* Cortex-M0: Focused on minimal size and power consumption, ideal for ultra-low-power applications. (13 μW/MHz)
+* Cortex-M0+: Even lower power than M0 with a shorter pipeline for faster wake-up times. (11 μW/MHz)
+* Cortex-M3: Offers a good balance between performance and power, with a rich instruction set including Thumb-2 for efficient code density. (32 μW/MHz)
+* Cortex-M4: Adds muscle for DSP (Digital Signal Processing) tasks and the option for a floating-point unit for more complex math.
+* Cortex-M7: Prioritizes high performance for demanding embedded applications.
+* Cortex-M23/M33: Integrate Arm TrustZone technology for enhanced security in security-critical applications.
