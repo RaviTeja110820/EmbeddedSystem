@@ -249,3 +249,45 @@ In summary, the ARM architecture is the overarching design framework, while ARM 
 * Cortex-M4: Adds muscle for DSP (Digital Signal Processing) tasks and the option for a floating-point unit for more complex math.
 * Cortex-M7: Prioritizes high performance for demanding embedded applications.
 * Cortex-M23/M33: Integrate Arm TrustZone technology for enhanced security in security-critical applications.
+
+## ARM Cortex-M4
+
+![[CortexM4]](./Images/CortexM4.jpg)
+
+![[CortexM4Block]](./Images/cortexM4Block.jpg)
+
+### Processor Core Features:
+
+* The Cortex-M4 core supports a subset of instructions from the Thumb instruction set, which is a compressed version of the ARM instruction set. This allows for more efficient code execution and reduced memory usage.
+* The Cortex-M4 core has multiple stack pointers, each associated with different operating modes such as Handler mode and Thread mode. This allows the processor to efficiently switch between different contexts without having to manually manage the stack.
+* The Cortex-M4 core includes hardware instructions for both signed (SDIV) and unsigned (UDIV) integer division operations. These instructions are implemented in hardware, providing faster execution compared to software-based division algorithms.
+* The Cortex-M4 core supports different operating modes, including Handler mode for handling exceptions and interrupts, and Thread mode for executing regular application code. These modes provide different levels of privilege and access to system resources.
+* The Cortex-M4 core supports both Thumb state, which uses 16-bit instructions for compact code, and Debug state, which allows debugging features such as breakpoints and watchpoints to be used during program execution.
+* Certain instructions like LDM (Load Multiple), STM (Store Multiple), PUSH, and POP can be interrupted and resumed without loss of data or corruption. This feature helps in achieving low interrupt latency, which is crucial for real-time embedded systems.
+* When an interrupt occurs, the Cortex-M4 core automatically saves the processor state (registers, program counter, etc.) before jumping to the Interrupt Service Routine (ISR). After the ISR completes, the core restores the saved state, allowing the interrupted code to resume execution seamlessly.
+* The Cortex-M4 core can be configured to support either big-endian or little-endian memory accesses, depending on the ARMv6 variant used. This flexibility allows the core to interface with different types of memory systems or peripherals.
+
+### Floating Point Unit:
+
+1. **32-bit instructions for single-precision data-processing operations:** The FPU supports 32-bit instructions specifically designed for single-precision floating-point operations, which are commonly used with C float data types.
+2. **Combined Multiply and Accumulate (Fused MAC) instructions:** This feature allows for increased precision in calculations by performing both multiplication and addition in a single instruction. It's particularly useful for signal processing and other applications requiring high accuracy.
+3. **Hardware support for various floating-point operations:** The FPU provides hardware acceleration for essential floating-point operations including conversion between integer and floating-point formats, addition, subtraction, multiplication (with optional accumulation), division, and square root calculation.
+4. **IEEE rounding modes:** The FPU supports IEEE standard rounding modes, such as rounding towards zero, rounding towards positive infinity, rounding towards negative infinity, and rounding towards nearest value (ties to even or odd).
+5. **Dedicated single-precision registers:** The FPU includes 32 dedicated 32-bit single-precision registers for storing floating-point data. Additionally, these registers can be accessed as 16 double-word (64-bit) registers for operations requiring extended precision or handling larger values. This flexibility enables efficient handling of floating-point data in various applications.
+
+### NVIC (Nested Vector Interrupt Controller):
+
+1. **Low latency interrupt processing:** The NVIC is designed to minimize interrupt latency, ensuring that interrupts are handled quickly and efficiently without significant delays.
+2. **External interrupts, configurable from 1 to 240:** The NVIC supports a configurable number of external interrupts, ranging from 1 to 240, allowing flexibility in system design to accommodate various interrupt sources.
+3. **Configurable priority levels:** Interrupt priorities are configurable with varying numbers of priority bits, typically ranging from 3 to 8 bits. This flexibility enables developers to prioritize interrupts based on their importance and criticality to the system.
+4. **Dynamic reprioritization of interrupts:** The NVIC allows for dynamic reprioritization of interrupts, enabling the system to adapt to changing conditions and prioritize critical events as needed.
+5. **Priority grouping:** The NVIC supports priority grouping, which enables developers to define preempting and non-preempting interrupt levels. This feature allows for fine-grained control over interrupt handling, ensuring that higher priority interrupts can preempt lower priority ones when necessary.
+6. **Automatic processor state saving and restoration:** When an interrupt occurs, the NVIC automatically saves the processor state upon entry to the interrupt service routine (ISR) and restores it upon exit. This process occurs with no additional instruction overhead, ensuring efficient interrupt handling without impacting performance.
+7. **Optional Wake-up Interrupt Controller (WIC):** Some Cortex-M4 implementations may include a Wake-up Interrupt Controller (WIC), which provides support for ultra-low-power sleep modes. The WIC allows the processor to wake up from sleep mode in response to specific wake-up events, minimizing power consumption in battery-powered devices.
+
+
+![[ProgrammersModel]](./Images/programmersModel.jpg)
+
+>> <https://www.st.com/resource/en/datasheet/stm32f411re.pdf> Page no -16
+
+![[memoryAndBus]](./Images/memoryAndBus.jpg)
